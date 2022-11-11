@@ -1,0 +1,40 @@
+<app-adminmodel></app-adminmodel>
+<form novalidate [formGroup]="Course" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="main">
+                    <h2>Add Course</h2>
+                    <div class="pull"><a class="btn btn-danger" routerLinkActive="active" routerLink="/course" >Cancel</a></div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label>Technology</label>
+                        <input type="text" class="form-control" placeholder="Technology" formControlName="Technology"/>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Course Name</label>
+                        <input type="text" class="form-control" placeholder="Course Name" formControlName="CourseName"/>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Course Start Date</label>
+                        <input type="date" class="form-control" placeholder="Course Start Date" formControlName="CourseStartDate"/>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Course End Date</label>
+                        <input type="date" class="form-control" placeholder="Course End Date" formControlName="CourseEndDate"/>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+             <button class="btn btn-success">Add Course</button>
+             <a class="btn btn-danger" routerLinkActive="active" routerLink="/course" >Cancel</a>
+            </div>
+          </div>
+      </div>
+    </section>
+    </form>

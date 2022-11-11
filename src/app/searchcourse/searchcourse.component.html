@@ -1,0 +1,60 @@
+<app-usermodel></app-usermodel>
+<form novalidate [formGroup]="SearchCourse" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Course Search</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label>Technology</label>
+                   <select class="form-control" formControlName="Technology">
+                       <option value="">Select</option>
+                       <option *ngFor="let i of List" value="{{i.technology}}">
+                        {{i.technology}}
+                       </option>
+                   </select>
+                </div>
+<div class="col-md-4 form-group">
+  <label>From Date</label>
+  <input type="date" class="form-control" placeholder="From Date" formControlName="From">
+</div>
+<div class="col-md-4 form-group">
+  <label>To Date</label>
+  <input type="date" class="form-control" placeholder="To Date" formControlName="To">
+</div>
+            </div>
+
+          </div>  
+          <div class="card-footer text-muted">
+            <button class="btn btn-success">Search Course</button>           
+           </div>   
+           <div class="card-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>                 
+                  <th scope="col">Technology</th>
+                  <th scope="col">Course Name</th>
+                  <th scope="col">From</th>
+                  <th scope="col">To</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of CourseData">       
+                  <th scope="row">{{i.technology}}</th>
+                  <th scope="row">{{i.courseName}}</th>
+                  <th scope="row">{{i.courseStartDate}}</th>
+                  <th scope="row">{{i.courseEndDate}}</th>
+                </tr>      
+              </tbody>
+            </table>
+           </div>      
+        </div>
+      </div>
+    </section>
+    </form>

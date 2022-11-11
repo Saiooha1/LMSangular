@@ -1,0 +1,18 @@
+section{
+   
+    padding-top: 20px;
+    background-color: teal;
+    min-height: 400px;
+    margin-left: 240px;
+    }
+    #main {
+        width: 200px;
+        border: 1px dotted white;
+      }
+      h2 {
+        margin: 0;
+          display: inline-block;
+      }
+      .pull {
+        float: right;
+      }

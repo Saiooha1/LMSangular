@@ -1,0 +1,42 @@
+<app-adminmodel></app-adminmodel>
+
+<form novalidate >
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Course Details</h2>
+              <div class="pull"><a class="btn btn-success" routerLinkActive="active" routerLink="/addcourse" >Add Course</a></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#Id</th>
+                  <th scope="col">Technology Name</th>
+                  <th scope="col">Course Number</th>
+                  <th scope="col">CourseStartDate</th>
+                  <th scope="col">CourseEndDate</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let courselist of List">                         
+                    <th scope="row">{{courselist.id}}</th>
+                    <th scope="row">{{courselist.technology}}</th> 
+                    <th scope="row">{{courselist.courseName}}</th> 
+                    <th scope="row">{{courselist.courseStartDate}}</th> 
+                    <th scope="row">{{courselist.courseEndDate}}</th>
+                    <th scope="row">{{courselist.isDelete}}</th>
+                    <th scope="row"><button type="submit" class="btn btn-primary" (click)='Active(courselist.id,courselist.isDelete)'>Active/De-active</button> </th>           
+                </tr>      
+              </tbody>
+            </table>
+          </div>          
+        </div>
+      </div>
+    </section>
+    </form>
